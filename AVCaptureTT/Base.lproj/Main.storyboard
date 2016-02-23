@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9527.1" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ThT-qC-mlh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKW-Dr-GiF">
+                                <rect key="frame" x="150" y="409" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lzb-Nh-eeL"/>
+                                    <constraint firstAttribute="width" constant="46" id="UxX-E8-vbX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tappedOKButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYY-ff-gHA"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGd-NA-mVp">
+                                <rect key="frame" x="0.0" y="64" width="320" height="337"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.83529411760000005" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PKW-Dr-GiF" firstAttribute="top" secondItem="fGd-NA-mVp" secondAttribute="bottom" constant="8" id="6mf-7P-MX5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PKW-Dr-GiF" secondAttribute="bottom" constant="41" id="BXb-Sn-wcU"/>
+                            <constraint firstItem="PKW-Dr-GiF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="DGN-ty-zvB"/>
+                            <constraint firstItem="fGd-NA-mVp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zdv-hF-R8V"/>
+                            <constraint firstItem="PKW-Dr-GiF" firstAttribute="top" secondItem="fGd-NA-mVp" secondAttribute="bottom" constant="8" id="jXh-9Y-GdA"/>
+                            <constraint firstItem="fGd-NA-mVp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oTG-mL-fV6"/>
+                            <constraint firstAttribute="trailing" secondItem="PKW-Dr-GiF" secondAttribute="trailing" constant="124" id="qfb-HV-I4f"/>
+                            <constraint firstAttribute="trailing" secondItem="fGd-NA-mVp" secondAttribute="trailing" id="rnk-Go-6Pk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cTp-Gr-bNC">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="eEu-JV-vDP">
+                            <connections>
+                                <action selector="tappedRightBarItemAction:" destination="BYZ-38-t0r" id="qDt-C8-KXv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cameraShowView" destination="fGd-NA-mVp" id="yzM-UF-odb"/>
+                        <outlet property="shutterButton" destination="PKW-Dr-GiF" id="kIA-Px-V4G"/>
+                        <outlet property="toggleButton" destination="eEu-JV-vDP" id="nP1-3x-ddg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="215"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6YG-xZ-rd0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ThT-qC-mlh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0kb-yk-335">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UCZ-2a-Xu5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcN-2V-Hv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95" y="215"/>
+        </scene>
+    </scenes>
+</document>
